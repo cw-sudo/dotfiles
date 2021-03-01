@@ -23,6 +23,7 @@ brew install jq
 brew install mas
 brew install mysql
 brew install nvm
+brew install zplug
 
 # .dmg apps
 
@@ -41,7 +42,6 @@ brew install karabiner-elements
 brew install kindle
 brew install obs
 brew install postman
-brew install sourcetree
 brew install spectacle
 # brew install virtualbox
 # brew install vagrant
