@@ -36,7 +36,11 @@ brew install firefox
 brew install forticlient
 brew install google-backup-and-sync
 brew install google-chrome
+
 brew install google-cloud-sdk
+source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+
 brew install google-japanese-ime
 brew install karabiner-elements
 brew install kindle

@@ -1,3 +1,10 @@
+
+export PATH=/usr/local/bin:/usr/local/sbin:$HOME/bin:$PATH
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
 # zplug
 source ~/.zplug/init.zsh
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
@@ -17,6 +24,8 @@ zplug "zsh-users/zsh-completions"
 zplug "chrissicool/zsh-256color"
 # コマンドライン上の文字リテラルの絵文字を emoji 化する
 zplug "mrowa44/emojify", as:command
+# enhancd
+zplug "b4b4r07/enhancd", use:"init.sh"
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
   printf "Install? [y/N]: "
@@ -32,4 +41,14 @@ HISTSIZE=10000
 # HISTFILE で指定したファイルに保存される履歴の件数
 SAVEHIST=10000
 # Then, source plugins and add commands to $PATH
+
+# alias
+alias ll='ls -l'
+alias la='ls -la'
+
+# 業務利用する設定
+if [ -f ~/gdrive_server/custom_alias.zsh ]; then
+  source ~/gdrive_server/custom_alias.zsh
+fi
+
 zplug load
