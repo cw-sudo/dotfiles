@@ -1,3 +1,5 @@
+export ZPLUG_HOME=/opt/homebrew/opt/zplug
+source $ZPLUG_HOME/init.zsh
 
 export PATH=/usr/local/bin:/usr/local/sbin:$HOME/bin:$PATH
 

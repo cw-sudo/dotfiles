@@ -4,7 +4,10 @@ if type brew > /dev/null 2>&1; then
   echo 'OK! already installed brew.'
 else
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  echo 'brew のPATH 設定を確認してください'
+  exit 0
 fi
+
 
 # Make sure using latest Homebrew
 echo 'start brew update...'
@@ -25,27 +28,25 @@ brew install mysql
 brew install nvm
 brew install zplug
 
+if type zplug > /dev/null 2>&1; then
+  echo 'OK! already installed zplug.'
+else
+  brew install zplug
+  echo 'zplug の追加設定を確認してください'
+  exit 0
+fi
+
 # .dmg apps
 
-brew install blackhole
 brew install clipy
 brew install deltawalker
-brew install docker
-brew install dropbox
 brew install firefox
-brew install forticlient
-brew install google-backup-and-sync
 brew install google-chrome
 brew install google-cloud-sdk
-brew install google-japanese-ime
 brew install karabiner-elements
 brew install kindle
-brew install obs
-brew install postman
 brew install slack
 brew install spectacle
-# brew install virtualbox
-# brew install vagrant
 brew install visual-studio-code
 
 # appstore app
