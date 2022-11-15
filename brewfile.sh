@@ -22,6 +22,7 @@ brew install ag
 brew install aws-sam-cli
 brew install awscli
 brew install git
+brew install gh
 brew install jq
 brew install mas
 brew install mysql
